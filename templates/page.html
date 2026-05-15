@@ -6,7 +6,7 @@
           <a href="{{ config.base_url }}">Home</a>&nbsp;»&nbsp;
           {% set section = get_section(path=page.ancestors | last) %}
           {% if not section.extra.hide_breadcrumb and not page.extra.hide_breadcrumb %}
-          <a href="{{ get_url(path='@/posts/_index.md') }}">Posts</a>&nbsp;»&nbsp;
+          <a href="{{ section.permalink }}">{{ section.title }}</a>&nbsp;»&nbsp;
           {% endif %}
           <a href="{{ page.permalink }}">{{ page.title }}</a>
       </div>

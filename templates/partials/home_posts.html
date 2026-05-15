@@ -1,3 +1,4 @@
+{% if paginator %}
 {% for page in paginator.pages %}
 {% if not page.extra.exclude_from_home %}
 <article class="post-entry">
@@ -16,6 +17,7 @@
 </article>
 {% endif %}
 {% endfor %}
+{% endif %}
 
 {% if paginator %}
 <footer class="page-footer">
