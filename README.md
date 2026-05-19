@@ -71,6 +71,21 @@ git submodule update --init --recursive
 Papermod customizations exist under a designated `extra.papermod` section.
 Refer to [config.toml](config.toml) for available options.
 
+## Section listing and pagination
+
+By default, a section lists all its pages with no pagination. To enable pagination,
+add `paginate_by` to the section's `_index.md`:
+
+```toml
++++
+title = "Posts"
+paginate_by = 5
++++
+```
+
+This renders previous/next navigation automatically. Without `paginate_by`, all pages
+in the section are shown on a single page.
+
 ## Contributing
 
 If you would like to help out with porting hugo-Papermod to Zola, feel free to pick

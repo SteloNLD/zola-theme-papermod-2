@@ -16,8 +16,13 @@
       {% endfor %}
   </h1>
 </header>
-{% if paginator.pages %}
-{% for page in paginator.pages %}
+{% if paginator %}
+  {% set pages = paginator.pages %}
+{% else %}
+  {% set pages = section.pages %}
+{% endif %}
+{% if pages %}
+{% for page in pages %}
 <article class="post-entry">
   <header class="entry-header">
       <h2>{{ page.title }}</h2>
